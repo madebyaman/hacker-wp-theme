@@ -7,9 +7,9 @@
  * @package Hacker_WP
  */
 
-if (! defined('_S_VERSION')) {
+if (! defined('HACKER_WP_VERSION')) {
     // Replace the version number of the theme on each release.
-    define('_S_VERSION', '1.0.0');
+    define('HACKER_WP_VERSION', '1.0.0');
 }
 
 if (! function_exists('hacker_wp_setup')) :
@@ -132,11 +132,11 @@ add_action('widgets_init', 'hacker_wp_widgets_init');
  */
 function hacker_wp_scripts()
 {
-    wp_enqueue_style('hacker-wp-style', get_stylesheet_uri(), array(), _S_VERSION);
-    wp_enqueue_style('hacker-wp-fonts', 'https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap', ['hacker-wp-style'], _S_VERSION);
+    wp_enqueue_style('hacker-wp-style', get_stylesheet_uri(), array(), HACKER_WP_VERSION);
+    wp_enqueue_style('hacker-wp-fonts', 'https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap', ['hacker-wp-style'], HACKER_WP_VERSION);
     wp_style_add_data('hacker-wp-style', 'rtl', 'replace');
 
-    wp_enqueue_script('hacker-wp-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
+    wp_enqueue_script('hacker-wp-navigation', get_template_directory_uri() . '/js/navigation.js', array(), HACKER_WP_VERSION, true);
 
     if (is_singular() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
