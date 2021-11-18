@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Hacker_Journey
+ * @package Hacker_WP
  */
 
 ?>
@@ -23,7 +23,7 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'hacker-journey'); ?></a>
+	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'hacker-wp'); ?></a>
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
@@ -38,14 +38,14 @@
 				<h2 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h2>
 				<?php
             endif;
-            $hacker_journey_description = get_bloginfo('description', 'display');
-            if ($hacker_journey_description || is_customize_preview()) :
+            $hacker_wp_description = get_bloginfo('description', 'display');
+            if ($hacker_wp_description || is_customize_preview()) :
                 ?>
-				<p class="site-description"><?php echo $hacker_journey_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped?></p>
+				<p class="site-description"><?php echo $hacker_wp_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped?></p>
 			<?php endif; ?>
 
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'hacker-journey'); ?></button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'hacker-wp'); ?></button>
 			<?php
             wp_nav_menu(
                     array(

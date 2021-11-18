@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Hacker_Journey
+ * @package Hacker_WP
  */
 
 ?>
@@ -22,14 +22,14 @@
 			?>
 			<div class="entry-meta">
 				<?php
-				hacker_journey_posted_on();
-				hacker_journey_posted_by();
+				hacker_wp_posted_on();
+				hacker_wp_posted_by();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php hacker_journey_post_thumbnail(); ?>
+	<?php hacker_wp_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
@@ -37,7 +37,7 @@
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'hacker-journey' ),
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'hacker-wp' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -50,7 +50,7 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'hacker-journey' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'hacker-wp' ),
 				'after'  => '</div>',
 			)
 		);
@@ -58,6 +58,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php hacker_journey_entry_footer(); ?>
+		<?php hacker_wp_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

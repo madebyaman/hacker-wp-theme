@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package Hacker_Journey
+ * @package Hacker_WP
  */
 
 /**
@@ -14,13 +14,13 @@
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
  */
-function hacker_journey_jetpack_setup() {
+function hacker_wp_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support(
 		'infinite-scroll',
 		array(
 			'container' => 'main',
-			'render'    => 'hacker_journey_infinite_scroll_render',
+			'render'    => 'hacker_wp_infinite_scroll_render',
 			'footer'    => 'page',
 		)
 	);
@@ -33,7 +33,7 @@ function hacker_journey_jetpack_setup() {
 		'jetpack-content-options',
 		array(
 			'post-details' => array(
-				'stylesheet' => 'hacker-journey-style',
+				'stylesheet' => 'hacker-wp-style',
 				'date'       => '.posted-on',
 				'categories' => '.cat-links',
 				'tags'       => '.tags-links',
@@ -48,12 +48,12 @@ function hacker_journey_jetpack_setup() {
 		)
 	);
 }
-add_action( 'after_setup_theme', 'hacker_journey_jetpack_setup' );
+add_action( 'after_setup_theme', 'hacker_wp_jetpack_setup' );
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function hacker_journey_infinite_scroll_render() {
+function hacker_wp_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		if ( is_search() ) :

@@ -1,10 +1,10 @@
 <?php
 /**
- * Hacker Journey functions and definitions
+ * Hacker WP functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Hacker_Journey
+ * @package Hacker_WP
  */
 
 if (! defined('_S_VERSION')) {
@@ -12,7 +12,7 @@ if (! defined('_S_VERSION')) {
     define('_S_VERSION', '1.0.0');
 }
 
-if (! function_exists('hacker_journey_setup')) :
+if (! function_exists('hacker_wp_setup')) :
     /**
      * Sets up theme defaults and registers support for various WordPress features.
      *
@@ -20,15 +20,15 @@ if (! function_exists('hacker_journey_setup')) :
      * runs before the init hook. The init hook is too late for some features, such
      * as indicating support for post thumbnails.
      */
-    function hacker_journey_setup()
+    function hacker_wp_setup()
     {
         /*
          * Make theme available for translation.
          * Translations can be filed in the /languages/ directory.
-         * If you're building a theme based on Hacker Journey, use a find and replace
-         * to change 'hacker-journey' to the name of your theme in all the template files.
+         * If you're building a theme based on Hacker WP, use a find and replace
+         * to change 'hacker-wp' to the name of your theme in all the template files.
          */
-        load_theme_textdomain('hacker-journey', get_template_directory() . '/languages');
+        load_theme_textdomain('hacker-wp', get_template_directory() . '/languages');
 
         // Add default posts and comments RSS feed links to head.
         add_theme_support('automatic-feed-links');
@@ -51,7 +51,7 @@ if (! function_exists('hacker_journey_setup')) :
         // This theme uses wp_nav_menu() in one location.
         register_nav_menus(
             array(
-                'menu-1' => esc_html__('Primary', 'hacker-journey'),
+                'menu-1' => esc_html__('Primary', 'hacker-wp'),
             )
         );
 
@@ -91,7 +91,7 @@ if (! function_exists('hacker_journey_setup')) :
         );
     }
 endif;
-add_action('after_setup_theme', 'hacker_journey_setup');
+add_action('after_setup_theme', 'hacker_wp_setup');
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -100,24 +100,24 @@ add_action('after_setup_theme', 'hacker_journey_setup');
  *
  * @global int $content_width
  */
-function hacker_journey_content_width()
+function hacker_wp_content_width()
 {
-    $GLOBALS['content_width'] = apply_filters('hacker_journey_content_width', 640);
+    $GLOBALS['content_width'] = apply_filters('hacker_wp_content_width', 640);
 }
-add_action('after_setup_theme', 'hacker_journey_content_width', 0);
+add_action('after_setup_theme', 'hacker_wp_content_width', 0);
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function hacker_journey_widgets_init()
+function hacker_wp_widgets_init()
 {
     register_sidebar(
         array(
-            'name'          => esc_html__('Sidebar', 'hacker-journey'),
+            'name'          => esc_html__('Sidebar', 'hacker-wp'),
             'id'            => 'sidebar-1',
-            'description'   => esc_html__('Add widgets here.', 'hacker-journey'),
+            'description'   => esc_html__('Add widgets here.', 'hacker-wp'),
             'before_widget' => '<section id="%1$s" class="widget %2$s">',
             'after_widget'  => '</section>',
             'before_title'  => '<h2 class="widget-title">',
@@ -125,24 +125,24 @@ function hacker_journey_widgets_init()
         )
     );
 }
-add_action('widgets_init', 'hacker_journey_widgets_init');
+add_action('widgets_init', 'hacker_wp_widgets_init');
 
 /**
  * Enqueue scripts and styles.
  */
-function hacker_journey_scripts()
+function hacker_wp_scripts()
 {
-    wp_enqueue_style('hacker-journey-style', get_stylesheet_uri(), array(), _S_VERSION);
-    wp_enqueue_style('hacker-journey-fonts', 'https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap', ['hacker-journey-style'], _S_VERSION);
-    wp_style_add_data('hacker-journey-style', 'rtl', 'replace');
+    wp_enqueue_style('hacker-wp-style', get_stylesheet_uri(), array(), _S_VERSION);
+    wp_enqueue_style('hacker-wp-fonts', 'https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap', ['hacker-wp-style'], _S_VERSION);
+    wp_style_add_data('hacker-wp-style', 'rtl', 'replace');
 
-    wp_enqueue_script('hacker-journey-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
+    wp_enqueue_script('hacker-wp-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
 
     if (is_singular() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
 }
-add_action('wp_enqueue_scripts', 'hacker_journey_scripts');
+add_action('wp_enqueue_scripts', 'hacker_wp_scripts');
 
 /**
  * Custom template tags for this theme.

@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Hacker_Journey
+ * @package Hacker_WP
  */
 
 get_header();

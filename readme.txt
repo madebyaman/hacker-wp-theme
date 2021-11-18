@@ -1,6 +1,6 @@
-=== Hacker Journey ===
+=== Hacker WP Theme ===
 
-Contributors: automattic
+Contributors: Aman Thakur
 Tags: custom-logo, custom-menu, featured-images, translation-ready
 
 Requires at least: 4.5
@@ -10,11 +10,9 @@ Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-A starter theme called Hacker Journey.
-
 == Description ==
 
-Description
+This is a WordPress Theme made for learning purposes. It comes with custom-logo, custom menu, featured images. It is translation ready.
 
 == Installation ==
 
@@ -26,7 +24,7 @@ Description
 
 = Does this theme support any plugins? =
 
-Hacker Journey includes support for WooCommerce and for Infinite Scroll in Jetpack.
+Hacker WP includes support for WooCommerce and for Infinite Scroll in Jetpack.
 
 == Changelog ==
 

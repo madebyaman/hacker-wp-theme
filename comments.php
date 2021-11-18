@@ -7,7 +7,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Hacker_Journey
+ * @package Hacker_WP
  */
 
 /*
@@ -28,18 +28,18 @@ if ( post_password_required() ) {
 		?>
 		<h2 class="comments-title">
 			<?php
-			$hacker_journey_comment_count = get_comments_number();
-			if ( '1' === $hacker_journey_comment_count ) {
+			$hacker_wp_comment_count = get_comments_number();
+			if ( '1' === $hacker_wp_comment_count ) {
 				printf(
 					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'hacker-journey' ),
+					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'hacker-wp' ),
 					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
 				);
 			} else {
 				printf( 
 					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $hacker_journey_comment_count, 'comments title', 'hacker-journey' ) ),
-					number_format_i18n( $hacker_journey_comment_count ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $hacker_wp_comment_count, 'comments title', 'hacker-wp' ) ),
+					number_format_i18n( $hacker_wp_comment_count ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
 				);
 			}
@@ -65,7 +65,7 @@ if ( post_password_required() ) {
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() ) :
 			?>
-			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'hacker-journey' ); ?></p>
+			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'hacker-wp' ); ?></p>
 			<?php
 		endif;
 
