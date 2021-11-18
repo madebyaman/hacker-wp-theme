@@ -1,0 +1,23 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.nav-links a {
+  border-radius: 3px;
+  background-color: transparent;
+  border: 2px solid $color__main;
+  color: $color__main;
+  line-height: 1;
+  padding: 10px 15px;
+
+  &:hover {
+    background: $color__main;
+    color: white;
+  }
+
+  &:active,
+  &:focus {
+    background: $color__main;
+    color: white;
+  }
+}

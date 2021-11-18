@@ -1,0 +1,51 @@
+a {
+  color: $color__link;
+  border-bottom: 1px solid #ddd;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-bottom-color: $color__link;
+  }
+
+  &:hover,
+  &:active {
+    outline: 0;
+  }
+
+  &.wp-block-button__link {
+    border-bottom: 0;
+  }
+}
+
+.site-header a {
+  color: white;
+  transition: padding 0.2s ease-in-out;
+  border-left: 0;
+  border-bottom: 1px solid transparent;
+  padding: 5px 5px 5px 0;
+
+  &:hover,
+  &:active,
+  &:focus {
+    border-color: #00bfb2;
+  }
+
+  @media (min-width: 680px) {
+    border-left: 3px solid transparent;
+    border-bottom: 0;
+
+    &:hover,
+    &:active,
+    &:focus {
+      padding-left: 5px;
+    }
+  }
+}
+
+figure a,
+img a,
+.wp-block-file__button {
+  border: 0;
+}

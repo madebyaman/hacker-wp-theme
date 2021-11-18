@@ -1,0 +1,47 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+  font-family: $font__heading;
+  font-weight: bold;
+  margin: 25px 0;
+
+  a {
+    color: $color__text-main;
+    text-decoration: none;
+    border-bottom: 0;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: rgba(64, 64, 64, 0.8);
+    }
+  }
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 27px;
+}
+
+h5 {
+  font-size: 24px;
+}
+
+h6 {
+  font-size: 21px;
+}

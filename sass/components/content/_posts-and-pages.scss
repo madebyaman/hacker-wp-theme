@@ -1,0 +1,30 @@
+.sticky {
+  display: block;
+}
+
+.post,
+.page {
+  margin: 0 0 3em;
+}
+
+.updated:not(.published) {
+  display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+  margin: 1.5em 0 0;
+}
+
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em;
+}
+
+.sticky {
+  display: block;
+  background: #e8fffd;
+  border-left: 3px solid #404040;
+  padding: 1rem;
+}
